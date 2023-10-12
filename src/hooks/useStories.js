@@ -1,26 +1,28 @@
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 const useStories = () => {
   const [stories, setStories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchStories = async () => {
-      try {
-        const response = await axios.get("../data/mockData.json");
+    setIsLoading(true);
+    axios
+      .get("src/data/mockData.json")
+      .then((response) => {
         setStories(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching stories:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchStories();
+        console.log("Success");
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        console.log("Error");
+        setIsLoading(false);
+      });
   }, []);
 
-  return { stories, loading };
+  return { stories, isLoading, error };
 };
 
 export default useStories;
