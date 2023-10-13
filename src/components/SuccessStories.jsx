@@ -16,8 +16,16 @@ const SuccessStories = () => {
   }, [dispatch, stories]);
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4">Stories</h1>
+    <div className="container mx-auto p-8 ">
+      <div className=" justify-center">
+        <h2 className="text-5xl font-bold mb-4 flex justify-center">
+          Impact Stories
+        </h2>
+        <h3 className="text-xl mb-6 flex justify-center">
+          Behind every success is a story. Learn about the stories of A2SVians.
+        </h3>
+      </div>
+
       {loading ? (
         <p>Loading...</p>
       ) : (
