@@ -12,12 +12,10 @@ const useStories = () => {
       .get("src/data/mockData.json")
       .then((response) => {
         setStories(response.data);
-        console.log("Success");
         setIsLoading(false);
       })
       .catch((error) => {
         setError(error);
-        console.log("Error");
         setIsLoading(false);
       });
   }, []);
