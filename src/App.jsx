@@ -5,6 +5,7 @@ import SubscribePage from "./components/SubscribePage";
 import GrowthGraph from "./components/GrowthGraph";
 import Introduction from "./components/Introduction";
 import GiftButton from "./components/GiftButton";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <GrowthGraph />
         <SubscribePage />
       </main>
-
+      <ScrollToTopButton />
       <Footer />
     </div>
   );
