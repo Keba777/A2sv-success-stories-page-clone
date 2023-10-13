@@ -17,9 +17,16 @@ const storySlice = createSlice({
         story.likes += 1;
       }
     },
+    decrementLikes: (state, action) => {
+      const story = state.stories.find((story) => story.id === action.payload);
+      if (story) {
+        story.likes -= 1;
+      }
+    },
   },
 });
 
-export const { setStories, incrementLikes } = storySlice.actions;
+export const { setStories, incrementLikes, decrementLikes } =
+  storySlice.actions;
 export const selectStories = (state) => state.story.stories;
 export default storySlice.reducer;

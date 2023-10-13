@@ -1,5 +1,25 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { incrementLikes, decrementLikes } from "../redux/slices/storySlice";
+import Like from "./Like";
+
 const StoryCard = ({ story }) => {
+  const dispatch = useDispatch();
+  const [liked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(story.likes);
+
+  const handleLike = () => {
+    if (liked) {
+      setLikes(likes - 1);
+      dispatch(decrementLikes(story.id));
+    } else {
+      setLikes(likes + 1);
+      dispatch(incrementLikes(story.id));
+    }
+    setLiked(!liked);
+  };
+
   const backgroundStyle = {
     backgroundImage: `url(${story.image})`,
   };
@@ -39,11 +59,9 @@ const StoryCard = ({ story }) => {
             {story.howChanged.content}
           </p>
         </div>
-
-        <div className="mt-2">
-          <button className="p-2 bg-blue-500 text-white">
-            Like ({story.likes})
-          </button>
+        <div className="mt-4 flex  " onClick={handleLike}>
+          <Like />
+          <p className="pl-1 text-red-700 text-lg ">{likes}</p>
         </div>
       </div>
     </div>
