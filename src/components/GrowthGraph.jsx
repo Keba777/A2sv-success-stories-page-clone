@@ -81,18 +81,8 @@ const GrowthGraph = () => {
     <div className="mt-2 mb-20">
       <h2 className="font-bold flex justify-center">The Growth of A2sv</h2>
       <div className="flex justify-center">
-        <div className="absolute top-1/2  transform -translate-y-1/2">
-          <div className="text-sm font-bold transform -rotate-90">
-            Student Levels
-          </div>
-        </div>
         <div className="w-9/12 h-96 relative">
           <Bar data={data} options={options} />
-        </div>
-        <div className="absolute top-1/2 right-24 transform -translate-y-1/2">
-          <div className="text-sm font-bold transform rotate-90">
-            Country Names
-          </div>
         </div>
       </div>
     </div>
