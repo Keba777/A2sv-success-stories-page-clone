@@ -25,7 +25,7 @@ const StoryCard = ({ story }) => {
   };
 
   return (
-    <div className="border rounded-md px-10 py-6 mb-10 bg-white shadow-2xl grid grid-cols-5 gap-7 ">
+    <div className="border rounded-md px-10 py-6 mb-10 bg-white shadow-md shadow-gray-400 grid grid-cols-5 gap-7 ">
       <div
         className="col-span-2 relative bg-cover bg-center h-4/5 rounded-xl mt-16"
         style={backgroundStyle}

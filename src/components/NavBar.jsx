@@ -10,7 +10,7 @@ const NavBar = () => {
       </span>
       <div className="flex ">
         <div className="hover:bg-slate-300 pt-5 pb-5 pl-5 pr-5  cursor-pointer">
-          <a href="/">Home</a>
+          <a href="https://a2sv.org/">Home</a>
         </div>
         <div className="hover:bg-slate-300 pt-5 pb-5 pl-5 pr-5  cursor-pointer">
           <select className="hover:bg-slate-300" id="">
@@ -23,13 +23,13 @@ const NavBar = () => {
           </select>
         </div>
         <div className="hover:bg-slate-300 pt-5 pb-5 pl-5 pr-5  cursor-pointer">
-          <a href="/">Success Stories</a>
+          <a href="#">Success Stories</a>
         </div>
         <div className="hover:bg-slate-300 pt-5 pb-5 pl-5 pr-5  cursor-pointer">
-          <a href="/">About Us</a>
+          <a href="https://a2sv.org/about">About Us</a>
         </div>
         <div className="hover:bg-slate-300 pt-5 pb-5 pl-5 pr-5  cursor-pointer">
-          <a href="/">Get Involved</a>
+          <a href="https://a2sv.org/get-involved">Get Involved</a>
         </div>
       </div>
       <div className="pt-3 pb-3">
