@@ -19,6 +19,8 @@ The project is organized as follows:
     - `GrowthGraph.js` : Component to display the growth statistics of A2SV using the `react-chartjs-2` library.
     - `SuccessGraph.js` : Component to display the success rate statistics of A2SV using the `react-chartjs-2` library.
   - `data/` : Contains mock data or static data used in the application.
+  - `hooks.` : Contains the custom hook for api calls to the mockData.
+    - `useStories.js` : Fetchs data from the mockData.json.
   - `redux/` : Contains Redux-related files.
     - `slices/` : Contains Redux slice files.
       - `storySlice.js` : Redux slice handling stories data and likes for each story.
