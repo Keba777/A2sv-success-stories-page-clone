@@ -6,6 +6,8 @@ This web application showcases success stories of A2SVians and presents growth s
 
 The project is organized as follows:
 
+- `public/` : Contains public data.
+    - `data/` : Contains mock data or static data used in the application.
 - `src/` : Contains the source code for the application.
   - `components/` : Contains various React components used in the application.
     - `NavBar.js` : Navigation bar component.
@@ -18,7 +20,6 @@ The project is organized as follows:
     - `SuccessStories.js` : Component to display a collection of success story cards.
     - `GrowthGraph.js` : Component to display the growth statistics of A2SV using the `react-chartjs-2` library.
     - `SuccessGraph.js` : Component to display the success rate statistics of A2SV using the `react-chartjs-2` library.
-  - `data/` : Contains mock data or static data used in the application.
   - `hooks.` : Contains the custom hook for api calls to the mockData.
     - `useStories.js` : Fetchs data from the mockData.json.
   - `redux/` : Contains Redux-related files.
