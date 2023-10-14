@@ -9,7 +9,7 @@ const useStories = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("../data/mockData.json")
+      .get("data/mockData.json")
       .then((response) => {
         setStories(response.data);
         setIsLoading(false);
